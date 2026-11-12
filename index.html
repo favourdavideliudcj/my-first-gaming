@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS // MADE BY FAVOUR DAVID ELIUD</title>
+  <link href="https://googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">NEXUS //  GAMING WEBSITE
+        
+    </div>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="#tournaments">Tournaments</a>
+      <a href="#leaderboard">Leaderboard</a>
+    </nav>
+    <button class="btn-primary" id="openModalNav">Launch Aim Trainer</button>
+  </header>
+
+  <div class="hero">
+    <span class="badge">SEASON 04 LIVE NOW</span>
+    <h1>DOMINATE THE DIGITAL ARENA</h1>
+    <p>Compete in daily ranked ladders, stream live esports tournaments, and sharpen your reflexes in our browser arcade.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" id="openModalHero">Play Quick Match</button>
+      <a href="#games" class="btn-secondary">Browse Library</a>
+    </div>
+  </div>
+
+  <section id="games">
+    <div class="section-header">
+      <h2>FEATURED TITLES</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fps">FPS</button>
+        <button class="filter-btn" data-filter="rpg">Action RPG</button>
+        <button class="filter-btn" data-filter="arcade">Arcade</button>
+      </div>
+    </div>
+
+    <div class="game-grid" id="gameGrid">
+      <div class="game-card" data-category="fps">
+        <div class="game-banner banner-fps">CYBERSTRIKE</div>
+        <div class="game-info">
+          <div class="game-meta"><span>TACTICAL FPS</span><span>42.8K ONLINE</span></div>
+          <h3>CyberStrike 2099</h3>
+          <p>5v5 competitive tactical shooter with destructible neon environments.</p>
+          <button class="btn-secondary full-width open-aim-btn">Test Aim Mode</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="rpg">
+        <div class="game-banner banner-rpg">AETHERIA</div>
+        <div class="game-info">
+          <div class="game-meta"><span>ACTION RPG</span><span>29.1K ONLINE</span></div>
+          <h3>Chronicles of Aetheria</h3>
+          <p>Open-world dark fantasy raids with real-time party combat.</p>
+          <button class="btn-secondary full-width">View Details</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="arcade">
+        <div class="game-banner banner-arcade">NEON DRIFT</div>
+        <div class="game-info">
+          <div class="game-meta"><span>ARCADE RACER</span><span>15.4K ONLINE</span></div>
+          <h3>Neon Drift Overdrive</h3>
+          <p>High-speed synthwave street racing with global ghost leaderboards.</p>
+          <button class="btn-secondary full-width">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tournaments">
+    <div class="section-header">
+      <h2>ESPORTS SCHEDULE</h2>
+    </div>
+    <div class="tournament-list">
+      <div class="match-row">
+        <div>
+          <span class="live-dot"></span><strong>LIVE NOW</strong> &bull; CyberStrike World Qualifier
+        </div>
+        <div><strong>Team Valkyrie</strong> vs <strong>Shadow Syndicate</strong></div>
+        <div class="prize-pool">$25,000 PRIZE POOL</div>
+      </div>
+      <div class="match-row">
+        <div>
+          <strong>UPCOMING &bull; 20:00 UTC</strong> &bull; Neon Drift Cup
+        </div>
+        <div><strong>32 Solo Racers</strong> &bull; Finals</div>
+        <div class="prize-pool">$10,000 PRIZE POOL</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NEXUS GAMING NETWORK. Built for competitive players  by Favour david.</p>
+  </footer>
+
+  <div class="modal" id="gameModal">
+    <div class="modal-box">
+      <h3>REFLEX AIM TRAINER</h3>
+      <p class="modal-sub">Click the glowing targets as fast as possible.</p>
+      <div class="score-bar">
+        Score: <span id="scoreDisplay">0</span>
+      </div>
+      <canvas id="aimCanvas" width="400" height="260"></canvas>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="resetGameBtn">Reset Score</button>
+        <button class="btn-primary" id="closeModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
